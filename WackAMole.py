@@ -28,19 +28,19 @@ class Mole():
     def __init__(self):
 
         # importing the image and scaling it to a ideal size
-        self.image = pygame.image.load("Image\Mole.png")
+        self.image = pygame.image.load("Assets\Image\Mole.png")
         self.image = pygame.transform.scale(self.image, (200, 150))
 
         # importing the death image and scaling it
         self.normalimage = self.image
-        self.deathimage = pygame.image.load("Image\Explosion.png")
+        self.deathimage = pygame.image.load("Assets\Image\Explosion.png")
 
         #Setting up the location it could be
         self.x = random.choice([100, 300, 500])
         self.y = random.choice([0, 225, 450])
         
         # the sound when the mole gets hit
-        self.deathsound = pygame.mixer.Sound("Audio\DeathSFX.mp3")
+        self.deathsound = pygame.mixer.Sound("Assets\Audio\DeathSFX.mp3")
 
         #ticks for time mesuring
         self.point = 0
@@ -132,7 +132,7 @@ class Wacker():
         self.y = 550 
 
         #importing the image
-        self.image = pygame.image.load("Image\Hammer.png")
+        self.image = pygame.image.load("Assets\Image\Hammer.png")
         self.image = pygame.transform.scale(self.image, (150, 150))
 
         #The two hammer image, one when the hammer is in the "waiting phase", the rotateimage is when the player hits
@@ -140,7 +140,7 @@ class Wacker():
         self.rotateimage = pygame.transform.rotate(self.image, -45)
 
         #import sound
-        self.hitsound = pygame.mixer.Sound("Audio\HammerSFX.mp3")
+        self.hitsound = pygame.mixer.Sound("Assets\Audio\HammerSFX.mp3")
 
         #setting up timer
         self.startcloak = time.time()
